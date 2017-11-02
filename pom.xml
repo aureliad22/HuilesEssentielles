@@ -6,9 +6,6 @@
   <name>HuilesEssentielles</name>
   <packaging>war</packaging>
     <build>
-        <sourceDirectory>src</sourceDirectory>
-        <finalName>HuilesEssentielles</finalName>
-
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
