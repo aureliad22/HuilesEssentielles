@@ -1,3 +1,4 @@
+package fr.kervegan.dao;
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -17,7 +18,7 @@ import org.junit.Test;
  * @date 2 nov. 2017
  * @version HuilesEssentielles V1.0
  */
-public class TestHuileDAO {
+public class HuileDAOTest {
 
 	/**
 	 * Méthode en charge de 
