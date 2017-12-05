@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- load H2 jdbc properties -->
+	<context:property-placeholder location="classpath:jdbc-h2.properties" />
+
+
+	<!-- The below config shows how to use a completely managed embedded version 
+		of H2 Uncomment it if you do not wish to configure H2 database settings manually. -->
+
+	<!-- <jdbc:embedded-database id="dataSource" type="H2"> <jdbc:script location="classpath:schema.sql"/> 
+		<jdbc:script location="classpath:test-data.sql"/> </jdbc:embedded-database> -->
+
+	<bean id="dataSource" class="org.h2.jdbcx.JdbcDataSource">
+		<property name="URL" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<jdbc:initialize-database>
+		<jdbc:script location="classpath:scriptDB.sql" />
+		<jdbc:script location="classpath:data.sql" />
+	</jdbc:initialize-database>
+
+	<bean id="entityManagerFactoryBean"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="fr.kervegan.bean.db" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">validate</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="huileDAO" class="fr.kervegan.dao.HuileDAOImpl">
+	</bean>
+</beans>

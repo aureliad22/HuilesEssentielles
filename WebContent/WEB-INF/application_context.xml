@@ -1,62 +1,51 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns:context="http://www.springframework.org/schema/context"
-    xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:mvc="http://www.springframework.org/schema/mvc"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
+	<!-- ANNOTATIONS POUR L'INJECTION DE DEPENDANCES -->
+	<context:annotation-config />
 
-    <!-- It register the beans in context and scan the annotations inside beans and activate them -->
-    <context:component-scan base-package="fr.kervegan.models.db" />
+	<!-- ANNOTATIONS POUR LA CREATION DE BEANS -->
+	<context:component-scan base-package="fr.kervegan.modeles.db" />
 
-    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-        <property name="jndiName" value="java:comp/env/jdbc/HuilesEssentielles"/>
-    </bean>
-    
-<!--    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> -->
-<!--        <property name="dataSource" ref="dataSource"/> -->
-<!--        <property name="hibernateProperties"> -->
-<!--          <value> -->
-<!--            hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect -->
-<!--          </value> -->
-<!--        </property> -->
-<!--      </bean> -->
-    
-    <bean id="entityManagerFactoryBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-      <property name="dataSource" ref="dataSource" />
-
-      <property name="packagesToScan" value="fr.kervegan.bean.db" />
-      <property name="jpaVendorAdapter">
-         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
-      </property>
-      <property name="jpaProperties">
-         <props>
-            <prop key="hibernate.hbm2ddl.auto">validate</prop>
-            <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
-            <prop key="show_sql">true</prop>
-         </props>
-      </property>
-   </bean>
-   
-   <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-      <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
-   </bean>
-   
-   <tx:annotation-driven transaction-manager="transactionManager"/>
-    
-	<bean id="huileDAO" class="fr.kervegan.dao.HuileDAOImpl">
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/HuilesEssentielles" />
 	</bean>
-       
- <!--   <bean id="huileController" class="main.java.fr.kervegan.huiles_essentielles.controllers.HuileControllerImpl">
-        <property  name="huileDao" ref="huileDAO"/>
-    </bean> -->
-    
-<!--     <bean id="huileAction" class="main.java.fr.kervegan.huiles_essentielles.views.HuileAction">
-        <property name="huileController" ref="chuileController"/>
-    </bean> -->
+
+	<bean id="entityManagerFactoryBean"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="fr.kervegan.bean.db" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">validate</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactoryBean" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="huileDAO" class="fr.kervegan.dao.EssentialOilDAOImpl">
+	</bean>
+
+	<!-- <bean id="huileController" class="main.java.fr.kervegan.huiles_essentielles.controllers.HuileControllerImpl"> 
+		<property name="huileDao" ref="huileDAO"/> </bean> -->
+
+	<!-- <bean id="huileAction" class="main.java.fr.kervegan.huiles_essentielles.views.HuileAction"> 
+		<property name="huileController" ref="chuileController"/> </bean> -->
 </beans>
