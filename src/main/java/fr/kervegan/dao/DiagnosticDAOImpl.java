@@ -30,7 +30,7 @@ public class DiagnosticDAOImpl implements DiagnosticDAO {
 	 * @see fr.kervegan.dao.DiagnosticDAO#insert(fr.kervegan.modeles.Diagnostic)
 	 */
 	@Override
-	public String insert(Diagnostic diagnostic) {
+	public Boolean insert(Diagnostic diagnostic) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -40,7 +40,8 @@ public class DiagnosticDAOImpl implements DiagnosticDAO {
 	 * @see fr.kervegan.dao.DiagnosticDAO#update(fr.kervegan.modeles.Diagnostic)
 	 */
 	@Override
-	public void update(Diagnostic diagnostic) {
+	public Boolean update(Diagnostic diagnostic) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}
@@ -50,7 +51,8 @@ public class DiagnosticDAOImpl implements DiagnosticDAO {
 	 * @see fr.kervegan.dao.DiagnosticDAO#delete(fr.kervegan.modeles.Diagnostic)
 	 */
 	@Override
-	public void delete(Diagnostic diagnostic) {
+	public Boolean delete(Diagnostic diagnostic) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}

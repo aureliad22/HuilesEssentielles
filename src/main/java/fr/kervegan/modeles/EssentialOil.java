@@ -13,7 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import fr.kervegan.modeles.Caution;
-import lombok.Data;
+import lombok.*;
 
 /**
  * @author oreade
@@ -22,7 +22,12 @@ import lombok.Data;
  */
 @Entity
 @Table(name="Huiles")
-public @Data class EssentialOil implements Serializable{
+@Getter
+@Setter
+@RequiredArgsConstructor
+@EqualsAndHashCode(of = {"number", "commonName", "latinGenderName","latinSpeciesName","note"})
+@ToString(exclude = {"listCautions","listDiagnostics"})
+public class EssentialOil implements Serializable{
 
 	/**
 	 * 
@@ -37,5 +42,5 @@ public @Data class EssentialOil implements Serializable{
 	private String latinSpeciesName;
 	private String note;
 	private List<Caution> listCautions;
-	private List<Diagnostic> listPathologies;
+	private List<Diagnostic> listDiagnostics;
 }

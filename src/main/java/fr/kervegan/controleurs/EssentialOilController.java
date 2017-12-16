@@ -14,7 +14,7 @@ import fr.kervegan.modeles.EssentialOil;
  * @date 2 nov. 2017
  * @version HuilesEssentielles V1.0
  */
-public interface HuileController {
+public interface EssentialOilController {
 
 	public String add(EssentialOil huile);
 	public void update(EssentialOil huile);

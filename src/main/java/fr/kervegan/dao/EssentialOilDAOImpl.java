@@ -29,7 +29,7 @@ public class EssentialOilDAOImpl implements EssentialOilDAO {
 	 * {@inheritDoc}
 	 * @see fr.kervegan.dao.EssentialOilDAO#insert(fr.kervegan.models.db.HuileDb)
 	 */
-	public String insert(EssentialOil huile) {
+	public Boolean insert(EssentialOil huile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,7 +38,8 @@ public class EssentialOilDAOImpl implements EssentialOilDAO {
 	 * {@inheritDoc}
 	 * @see fr.kervegan.dao.EssentialOilDAO#update(fr.kervegan.models.db.HuileDb)
 	 */
-	public void update(EssentialOil huile) {
+	public Boolean update(EssentialOil huile) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}
@@ -47,7 +48,8 @@ public class EssentialOilDAOImpl implements EssentialOilDAO {
 	 * {@inheritDoc}
 	 * @see fr.kervegan.dao.EssentialOilDAO#delete(fr.kervegan.models.db.HuileDb)
 	 */
-	public void delete(EssentialOil huile) {
+	public Boolean delete(EssentialOil huile) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}

@@ -16,9 +16,9 @@ import fr.kervegan.modeles.Pathology;
  */
 public interface PathologyDAO {
 
-	public String insert(Pathology pathology);
-	public void update (Pathology pathology);
-	public void delete(Pathology pathology);
+	public Boolean insert(Pathology pathology);
+	public Boolean update (Pathology pathology);
+	public Boolean delete(Pathology pathology);
 	public List<Pathology> getAll();
 	public Pathology getById(String id);
 }

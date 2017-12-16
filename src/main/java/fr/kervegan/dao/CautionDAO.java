@@ -16,9 +16,9 @@ import fr.kervegan.modeles.Caution;
  */
 public interface CautionDAO {
 
-	public String insert(Caution caution);
-	public void update (Caution caution);
-	public void delete(Caution caution);
+	public Boolean insert(Caution caution);
+	public Boolean update (Caution caution);
+	public Boolean delete(Caution caution);
 	public List<Caution> getAll();
 	public Caution getById(String id);
 }

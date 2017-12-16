@@ -16,9 +16,9 @@ import fr.kervegan.modeles.Synergy;
  */
 public interface SynergyDAO {
 
-	public String insert(Synergy synergy);
-	public void update (Synergy synergy);
-	public void delete(Synergy synergy);
+	public Boolean insert(Synergy synergy);
+	public Boolean update (Synergy synergy);
+	public Boolean delete(Synergy synergy);
 	public List<Synergy> getAll();
 	public Synergy getById(String id);
 }

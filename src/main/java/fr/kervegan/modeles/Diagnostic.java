@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.*;
 
 /**
  * @author oreade
@@ -21,7 +21,12 @@ import lombok.Data;
  */
 @Entity
 @Table(name="diagnostics")
-public @Data class Diagnostic implements Serializable{
+@Getter
+@Setter
+@RequiredArgsConstructor
+@EqualsAndHashCode(of = {"description"})
+@ToString(exclude = "listPathologies")
+public class Diagnostic implements Serializable{
 
 	/**
 	 * 

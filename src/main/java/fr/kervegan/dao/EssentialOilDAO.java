@@ -16,9 +16,9 @@ import fr.kervegan.modeles.EssentialOil;
  */
 public interface EssentialOilDAO {
 
-	public String insert(EssentialOil oil);
-	public void update (EssentialOil oil);
-	public void delete(EssentialOil oil);
+	public Boolean insert(EssentialOil oil);
+	public Boolean update (EssentialOil oil);
+	public Boolean delete(EssentialOil oil);
 	public List<EssentialOil> getAll();
 	public EssentialOil getById(String id);
 }

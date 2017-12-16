@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.*;
 
 /**
  * @author oreade
@@ -20,7 +20,12 @@ import lombok.Data;
  */
 @Entity
 @Table(name="precautions")
-public @Data class Caution implements Serializable{
+@Getter
+@Setter
+@RequiredArgsConstructor
+@EqualsAndHashCode(of = {"label"})
+@ToString
+public class Caution implements Serializable{
 
 	/**
 	 * 

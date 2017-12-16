@@ -29,7 +29,7 @@ public class CautionDAOImpl implements CautionDAO {
 	 * @see fr.kervegan.dao.CautionDAO#insert(fr.kervegan.modeles.Caution)
 	 */
 	@Override
-	public String insert(Caution caution) {
+	public Boolean insert(Caution caution) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -39,7 +39,8 @@ public class CautionDAOImpl implements CautionDAO {
 	 * @see fr.kervegan.dao.CautionDAO#update(fr.kervegan.modeles.Caution)
 	 */
 	@Override
-	public void update(Caution caution) {
+	public Boolean update(Caution caution) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}
@@ -49,7 +50,8 @@ public class CautionDAOImpl implements CautionDAO {
 	 * @see fr.kervegan.dao.CautionDAO#delete(fr.kervegan.modeles.Caution)
 	 */
 	@Override
-	public void delete(Caution caution) {
+	public Boolean delete(Caution caution) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}

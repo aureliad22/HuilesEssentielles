@@ -16,9 +16,9 @@ import fr.kervegan.modeles.Diagnostic;
  */
 public interface DiagnosticDAO {
 
-	public String insert(Diagnostic diagnostic);
-	public void update (Diagnostic diagnostic);
-	public void delete(Diagnostic diagnostic);
+	public Boolean insert(Diagnostic diagnostic);
+	public Boolean update (Diagnostic diagnostic);
+	public Boolean delete(Diagnostic diagnostic);
 	public List<Diagnostic> getAll();
 	public Diagnostic getById(String id);
 }

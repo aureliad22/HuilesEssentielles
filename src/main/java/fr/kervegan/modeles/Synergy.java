@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.*;
 
 /**
  * @author oreade
@@ -18,7 +18,12 @@ import lombok.Data;
  */
 @Entity
 @Table(name="synergies")
-public @Data class Synergy {
+@Getter
+@Setter
+@RequiredArgsConstructor
+@EqualsAndHashCode(of = {"name", "description"})
+@ToString
+public class Synergy {
 
 	@Id
 	private int id;

@@ -7,7 +7,7 @@ package fr.kervegan.controleurs;
 
 import java.util.List;
 
-import fr.kervegan.dao.CautionDAOImpl;
+import fr.kervegan.dao.CautionDAO;
 import fr.kervegan.modeles.Caution;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import lombok.Setter;
  */
 public class CautionControllerImpl implements CautionController {
 
-	private @Getter @Setter CautionDAOImpl cdao;
+	private @Getter @Setter CautionDAO cdao;
 	
 	/**
 	 * {@inheritDoc}

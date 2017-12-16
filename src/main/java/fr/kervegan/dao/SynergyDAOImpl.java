@@ -30,7 +30,7 @@ public class SynergyDAOImpl implements SynergyDAO {
 	 * @see fr.kervegan.dao.SynergyDAO#insert(fr.kervegan.modeles.Synergy)
 	 */
 	@Override
-	public String insert(Synergy synergy) {
+	public Boolean insert(Synergy synergy) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -40,7 +40,8 @@ public class SynergyDAOImpl implements SynergyDAO {
 	 * @see fr.kervegan.dao.SynergyDAO#update(fr.kervegan.modeles.Synergy)
 	 */
 	@Override
-	public void update(Synergy synergy) {
+	public Boolean update(Synergy synergy) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}
@@ -50,7 +51,8 @@ public class SynergyDAOImpl implements SynergyDAO {
 	 * @see fr.kervegan.dao.SynergyDAO#delete(fr.kervegan.modeles.Synergy)
 	 */
 	@Override
-	public void delete(Synergy synergy) {
+	public Boolean delete(Synergy synergy) {
+		return null;
 		// TODO Auto-generated method stub
 
 	}

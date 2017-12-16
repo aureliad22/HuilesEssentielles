@@ -7,7 +7,7 @@ package fr.kervegan.controleurs;
 
 import java.util.List;
 
-import fr.kervegan.dao.PathologyDAOImpl;
+import fr.kervegan.dao.PathologyDAO;
 import fr.kervegan.modeles.Pathology;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import lombok.Setter;
  */
 public class PathologyControllerImpl implements PathologyController {
 
-	private @Getter @Setter PathologyDAOImpl pdao;
+	private @Getter @Setter PathologyDAO pdao;
 	
 	/**
 	 * {@inheritDoc}

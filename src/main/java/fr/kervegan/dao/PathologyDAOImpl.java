@@ -30,7 +30,7 @@ public class PathologyDAOImpl implements PathologyDAO {
 	 * @see fr.kervegan.dao.PathologyDAO#insert(fr.kervegan.modeles.Pathology)
 	 */
 	@Override
-	public String insert(Pathology pathology) {
+	public Boolean insert(Pathology pathology) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -40,7 +40,8 @@ public class PathologyDAOImpl implements PathologyDAO {
 	 * @see fr.kervegan.dao.PathologyDAO#update(fr.kervegan.modeles.Pathology)
 	 */
 	@Override
-	public void update(Pathology pathology) {
+	public Boolean update(Pathology pathology) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
@@ -50,7 +51,8 @@ public class PathologyDAOImpl implements PathologyDAO {
 	 * @see fr.kervegan.dao.PathologyDAO#delete(fr.kervegan.modeles.Pathology)
 	 */
 	@Override
-	public void delete(Pathology pathology) {
+	public Boolean delete(Pathology pathology) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

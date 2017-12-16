@@ -7,7 +7,7 @@ package fr.kervegan.controleurs;
 
 import java.util.List;
 
-import fr.kervegan.dao.SynergyDAOImpl;
+import fr.kervegan.dao.SynergyDAO;
 import fr.kervegan.modeles.Synergy;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import lombok.Setter;
  */
 public class SynergyControllerImpl implements SynergyController {
 
-	private @Getter @Setter SynergyDAOImpl sdao;
+	private @Getter @Setter SynergyDAO sdao;
 	
 	/**
 	 * {@inheritDoc}

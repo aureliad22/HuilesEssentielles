@@ -7,7 +7,7 @@ package fr.kervegan.controleurs;
 
 import java.util.List;
 
-import fr.kervegan.dao.DiagnosticDAOImpl;
+import fr.kervegan.dao.DiagnosticDAO;
 import fr.kervegan.modeles.Diagnostic;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import lombok.Setter;
  */
 public class DiagnosticControllerImpl implements DiagnosticController {
 
-	private @Getter @Setter DiagnosticDAOImpl ddao;
+	private @Getter @Setter DiagnosticDAO ddao;
 	
 	/**
 	 * {@inheritDoc}
