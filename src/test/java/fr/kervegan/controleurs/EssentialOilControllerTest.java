@@ -89,32 +89,4 @@ public class EssentialOilControllerTest {
 		verify(oildao, times(1)).update(any(EssentialOil.class));
 		//assertThat(oilctrl.add(oil)).isTrue();	}
 	}
-	
-	/**
-	 * Test method for
-	 * {@link fr.kervegan.controleurs.EssentialOilController#delete(fr.kervegan.modeles.EssentialOil)}.
-	 */
-	@Test
-	public void testDelete() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for
-	 * {@link fr.kervegan.controleurs.EssentialOilController#findAll()}.
-	 */
-	@Test
-	public void testFindAll() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for
-	 * {@link fr.kervegan.controleurs.EssentialOilController#findById(java.lang.String)}.
-	 */
-	@Test
-	public void testFindById() {
-		fail("Not yet implemented");
-	}
-
 }
