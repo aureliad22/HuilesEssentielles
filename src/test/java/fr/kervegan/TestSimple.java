@@ -93,6 +93,6 @@ public class TestSimple {
 	    // puis que la valeur à l'index 1 de cette colonne
 	    // est égal à la date 08/08/1960
 	    assertThat(table).column(4).hasColumnName("date_naissance")
-	                     .value(1).isEqualTo(DateValue.of(1960, 8, 8));
+	                     .value(1).isEqualTo(DateValue.of(1961, 8, 8));
 	  }
 }

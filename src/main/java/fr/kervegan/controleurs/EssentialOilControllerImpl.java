@@ -26,7 +26,7 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 * @see fr.kervegan.controleurs.EssentialOilController#add(fr.kervegan.modeles.EssentialOil)
 	 */
 	@Override
-	public String add(EssentialOil huile) {
+	public Boolean add(EssentialOil huile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -36,7 +36,8 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 * @see fr.kervegan.controleurs.EssentialOilController#update(fr.kervegan.modeles.EssentialOil)
 	 */
 	@Override
-	public void update(EssentialOil huile) {
+	public Boolean update(EssentialOil huile) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}
@@ -46,7 +47,8 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 * @see fr.kervegan.controleurs.EssentialOilController#delete(fr.kervegan.modeles.EssentialOil)
 	 */
 	@Override
-	public void delete(EssentialOil huile) {
+	public Boolean delete(EssentialOil huile) {
+		return null;
 		// TODO Auto-generated method stub
 		
 	}

@@ -16,9 +16,9 @@ import fr.kervegan.modeles.EssentialOil;
  */
 public interface EssentialOilController {
 
-	public String add(EssentialOil huile);
-	public void update(EssentialOil huile);
-	public void delete(EssentialOil huile);
+	public Boolean add(EssentialOil huile);
+	public Boolean update(EssentialOil huile);
+	public Boolean delete(EssentialOil huile);
 	public List<EssentialOil> findAll();
 	public EssentialOil findById(String id);
 }
