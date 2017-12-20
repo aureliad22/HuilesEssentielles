@@ -20,5 +20,5 @@ public interface EssentialOilController {
 	public Boolean update(EssentialOil huile);
 	public Boolean delete(EssentialOil huile);
 	public List<EssentialOil> findAll();
-	public EssentialOil findById(String id);
+	public EssentialOil findById(int id);
 }

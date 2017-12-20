@@ -67,7 +67,7 @@ public class EssentialOilDAOImpl implements EssentialOilDAO {
 	 * {@inheritDoc}
 	 * @see fr.kervegan.dao.EssentialOilDAO#getById(java.lang.String)
 	 */
-	public EssentialOil getById(String id) {
+	public EssentialOil getById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

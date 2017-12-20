@@ -20,5 +20,5 @@ public interface EssentialOilDAO {
 	public Boolean update (EssentialOil oil);
 	public Boolean delete(EssentialOil oil);
 	public List<EssentialOil> getAll();
-	public EssentialOil getById(String id);
+	public EssentialOil getById(int id);
 }

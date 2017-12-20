@@ -27,8 +27,7 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 */
 	@Override
 	public Boolean add(EssentialOil huile) {
-		// TODO Auto-generated method stub
-		return null;
+		return eodao.insert(huile);
 	}
 
 	/**
@@ -37,9 +36,7 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 */
 	@Override
 	public Boolean update(EssentialOil huile) {
-		return null;
-		// TODO Auto-generated method stub
-		
+		return eodao.update(huile);	
 	}
 
 	/**
@@ -48,9 +45,7 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 */
 	@Override
 	public Boolean delete(EssentialOil huile) {
-		return null;
-		// TODO Auto-generated method stub
-		
+		return eodao.delete(huile);	
 	}
 
 	/**
@@ -59,8 +54,7 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 */
 	@Override
 	public List<EssentialOil> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return eodao.getAll();
 	}
 
 	/**
@@ -68,9 +62,8 @@ public class EssentialOilControllerImpl implements EssentialOilController {
 	 * @see fr.kervegan.controleurs.EssentialOilController#findById(java.lang.String)
 	 */
 	@Override
-	public EssentialOil findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public EssentialOil findById(int id) {
+		return eodao.getById(id);
 	}
 
 }
